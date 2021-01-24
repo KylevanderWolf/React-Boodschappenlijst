@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react"
+import Container from './Container'
+
+//Styling
+const styles = {
+  container: {
+    display: 'flex',
+    backgroundColor: 'white',
+    minHeight: '100vh',
+    maxHeight: 'auto',
+    display: 'flex',
+    width: '100%',
+    alignItems: 'center',
+    flexDirection: 'column'
+  },
+  header: {
+    height: '10vh',
+  }
+};
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="App" style={styles.container}>
+      <header style={styles.header}>
+        <h1>Boodschappenlijst</h1>
       </header>
+      <Container />
     </div>
   );
 }
